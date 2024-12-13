@@ -1,0 +1,35 @@
+
+/* Might need to change transform origin depending on font-size, weight and font-family */
+
+.letter {                                                   
+    display: inline-block;
+    transform: scalex(1);
+    transform-origin:54%;
+}
+
+.letter-animation {
+    animation: letter-turn 0.5s ease-in-out 1 forwards;
+}
+
+.letter-reverse {
+    animation: letter-reverse 0.5s ease-in-out 1 forwards;
+}
+
+@keyframes letter-turn {
+    from {
+        transform: scalex(1);
+
+    }
+    to {
+        transform: scalex(-1);
+    }
+}
+
+@keyframes letter-reverse {
+    from {
+        transform: scalex(-1);
+    }
+    to {
+        transform: scalex(1);
+    }
+}
